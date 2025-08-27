@@ -19,6 +19,10 @@ services:
       STORE_MODEL_IN_DB: "True" # allows adding models to proxy via UI
     env_file:
       - .env # Load local .env file
+    volumes:
+      - ./config.yaml:/app/config.yaml # Mounts the local config file into the container
+    command:
+      - "--config=/app/config.yaml" # Specifies the config file to use when starting the service
     depends_on:
       - db  # Indicates that this service depends on the 'db' service, ensuring 'db' starts first
     healthcheck:  # Defines the health check configuration for the container
