@@ -1,10 +1,18 @@
 model_list:
+  - model_name: claude-sonnet-4.5
+    litellm_params:
+      model: "claude-sonnet-4-5-20250929"
+      api_base: "https://api.ai.public.rakuten-it.com/anthropic"
+      extra_headers:
+        Authorization: "os.environ/RAKUTEN_AI_API_KEY"
+        anthropic-beta: "context-1m-2025-08-07"
   - model_name: claude-sonnet-4
     litellm_params:
       model: "claude-sonnet-4-20250514"
       api_base: "https://api.ai.public.rakuten-it.com/anthropic"
       extra_headers:
         Authorization: "os.environ/RAKUTEN_AI_API_KEY"
+        anthropic-beta: "context-1m-2025-08-07"
   - model_name: claude-3-5-haiku
     litellm_params:
       model: "claude-3-5-haiku-20241022"
