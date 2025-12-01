@@ -12,14 +12,6 @@ model_list:
       api_base: "https://api.ai.public.rakuten-it.com/anthropic"
       extra_headers:
         Authorization: "os.environ/RAKUTEN_AI_API_KEY"
-  # - model_name: gemini-3-pro-preview
-  #   litellm_params:
-  #     model: vertex_ai/gemini-3-pro-preview
-  #     api_base: "https://api.ai.public.rakuten-it.com/google-vertexai/v1/"
-  #     vertex_project: "dummy"
-  #     vertex_region: "dummy"
-  #     extra_headers:
-  #       Authorization: "os.environ/RAKUTEN_AI_API_KEY"
   - model_name: gemini-3-pro-preview
     litellm_params:
       model: "openai/google/gemini-3-pro-preview"
